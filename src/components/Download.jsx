@@ -6,9 +6,11 @@ import { useInView } from 'react-intersection-observer'
 
 const APK_URL = '#'
 
+const API_BASE = import.meta.env.VITE_API_URL || 'https://us-central1-kisaan-krushi-a9b0e.cloudfunctions.net/api'
+
 async function getDownloadCount() {
   try {
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/stats`)
+    const response = await fetch(`${API_BASE}/stats`)
     if (!response.ok) return 0
     const data = await response.json()
     return data.downloadCount ?? 0
@@ -17,7 +19,7 @@ async function getDownloadCount() {
 
 async function incrementDownloadCount() {
   try {
-    await fetch(`${import.meta.env.VITE_API_URL}/download`, { method: 'POST' })
+    await fetch(`${API_BASE}/download`, { method: 'POST' })
   } catch { /* non-critical */ }
 }
 
