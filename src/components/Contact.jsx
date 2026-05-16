@@ -3,8 +3,6 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import toast from 'react-hot-toast'
-import { collection, addDoc, serverTimestamp } from 'firebase/firestore'
-import { db } from '../firebase'
 const CONTACT_EMAIL = 'support.kisaankrushi@gmail.com'
 function validate(form, t) {
   if (!form.name.trim()) return t('contact.nameLabel') + ' is required'
@@ -52,10 +50,22 @@ export default function Contact() {
         message: form.message.trim().slice(0, 1000),
         language: i18n.language,
       }
-      await addDoc(collection(db, 'contacts'), { ...clean, timestamp: serverTimestamp() })
+
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(clean),
+      })
+
+      if (!response.ok) {
+        const errorData = await response.json()
+        throw new Error(errorData.error || 'Failed to send message')
+      }
+
       toast.success(t('contact.success'))
       setForm({ name: '', email: '', phone: '', message: '' })
-    } catch {
+    } catch (err) {
+      console.error('Contact submit error:', err)
       toast.error(t('contact.error'))
     } finally {
       setLoading(false)

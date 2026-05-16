@@ -2,24 +2,22 @@ import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { doc, getDoc, setDoc, updateDoc, increment } from 'firebase/firestore'
-import { db } from '../firebase'
+
 
 const APK_URL = '#'
 
 async function getDownloadCount() {
   try {
-    const ref = doc(db, 'stats', 'downloads')
-    const snap = await getDoc(ref)
-    if (snap.exists()) return snap.data().count ?? 0
-    await setDoc(ref, { count: 0 })
-    return 0
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/stats`)
+    if (!response.ok) return 0
+    const data = await response.json()
+    return data.downloadCount ?? 0
   } catch { return 0 }
 }
 
 async function incrementDownloadCount() {
   try {
-    await updateDoc(doc(db, 'stats', 'downloads'), { count: increment(1) })
+    await fetch(`${import.meta.env.VITE_API_URL}/download`, { method: 'POST' })
   } catch { /* non-critical */ }
 }
 
