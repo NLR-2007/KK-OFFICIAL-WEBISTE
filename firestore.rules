@@ -1,0 +1,27 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Allow write to contacts collection (contact form submissions)
+    match /contacts/{docId} {
+      allow read: if false; // Admin only via Firebase Console
+      allow create: if request.resource.data.keys().hasAll(['name', 'email', 'message', 'language', 'timestamp'])
+                   && request.resource.data.name is string
+                   && request.resource.data.email is string
+                   && request.resource.data.message is string
+                   && request.resource.data.name.size() <= 100
+                   && request.resource.data.message.size() <= 1000;
+    }
+
+    // Allow read/write for stats/downloads (download counter)
+    match /stats/downloads {
+      allow read: if true;
+      allow write: if true; // Increment only – validated in function code
+    }
+
+    // Allow only server-side writes for the Trigger Email extension
+    match /mail/{document} {
+      allow read, write: if false; // only server-side writes allowed
+    }
+  }
+}

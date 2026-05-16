@@ -1,0 +1,13 @@
+{
+  "projects": {
+    "default": "kisaan-krushi-a9b0e"
+  },
+  "targets": {},
+  "etags": {
+    "kisaan-krushi-a9b0e": {
+      "extensionInstances": {
+        "firestore-send-email": "b426dc42423e9794cc27300146d7004fe4088bcba1b1958c41540f1b1be4ac36"
+      }
+    }
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "techStack": "Tech Stack",
+    "about": "About",
+    "contact": "Contact",
+    "downloadApp": "Download App"
+  },
+  "hero": {
+    "badge": "Flutter × Firebase × AI",
+    "headline": "AI Tech Meets Farming",
+    "subheadline": "Kisaan Krushi gives Indian farmers real-time AI-powered weather forecasts, cloud-synced farm profiles, and smart agricultural insights — built with Flutter, powered by Firebase.",
+    "downloadApp": "Download App",
+    "seeFeatures": "See Features",
+    "stats": {
+      "farmersLabel": "Indian Farmers",
+      "farmersValue": "100M+",
+      "weatherLabel": "Real-time Weather",
+      "cloudLabel": "Cloud Sync",
+      "aiLabel": "AI Powered"
+    }
+  },
+  "features": {
+    "title": "Everything a Farmer Needs",
+    "subtitle": "Built specifically for the Indian farming ecosystem",
+    "card1Title": "Live Weather Intelligence",
+    "card1Desc": "Real-time weather + 5-day forecast based on your GPS location. Fallback to nearest city if location is unavailable.",
+    "card2Title": "Farmer Profile Management",
+    "card2Desc": "Create your complete farmer profile — stored securely in Firebase Firestore, synced across all your devices.",
+    "card3Title": "AI-Powered Insights",
+    "card3Desc": "AI technology analyzes weather patterns and farm data to give you intelligent crop and farming recommendations.",
+    "card4Title": "Secure Firebase Auth",
+    "card4Desc": "Sign up and log in safely with Firebase Authentication. Your data is encrypted and private.",
+    "card5Title": "Location-Aware",
+    "card5Desc": "GPS-powered location intelligence provides hyper-local weather and insights relevant to your exact farm coordinates.",
+    "card6Title": "Cloud Sync",
+    "card6Desc": "All your farm data is automatically backed up to the cloud. Switch phones, never lose your data."
+  },
+  "howItWorks": {
+    "title": "Get Started in 3 Simple Steps",
+    "step1Title": "Download & Sign Up",
+    "step1Desc": "Install Kisaan Krushi on your Android device. Register with your email to create your secure farmer account in seconds.",
+    "step2Title": "Build Your Profile",
+    "step2Desc": "Enter your farm details — name, location, crop type, and land area. Your profile is instantly saved to the cloud.",
+    "step3Title": "Get AI Insights",
+    "step3Desc": "Enable GPS to receive real-time weather and AI-powered farming recommendations tailored to your exact farm location."
+  },
+  "screenshots": {
+    "title": "See Kisaan Krushi in Action",
+    "swipe": "Swipe to explore",
+    "screen1": "Login & Register",
+    "screen2": "Smart Dashboard",
+    "screen3": "Farmer Profile"
+  },
+  "techStack": {
+    "title": "Built With Modern Technology",
+    "subtitle": "Production-grade stack trusted by developers worldwide",
+    "flutterDesc": "Cross-platform mobile framework by Google",
+    "firebaseDesc": "Authentication, Firestore database, Cloud Hosting",
+    "reactDesc": "Frontend website framework",
+    "nodejsDesc": "Backend API and server logic",
+    "openweatherDesc": "Real-time weather data API",
+    "dartDesc": "Programming language powering Flutter"
+  },
+  "about": {
+    "title": "Why Kisaan Krushi?",
+    "text1": "India has over 100 million farmers. Most lack access to real-time, AI-powered agricultural intelligence on their smartphones. Kisaan Krushi bridges that gap — combining Flutter's beautiful UI, Firebase's enterprise-grade cloud infrastructure, and OpenWeatherMap's accurate weather data to create a tool that genuinely helps farmers make smarter, more profitable decisions every single day.",
+    "text2": "From Andhra Pradesh rice fields to Telangana cotton farms — Kisaan Krushi is your AI-powered digital farming companion.",
+    "quote": "AI Tech Meets Farming — and changes everything."
+  },
+  "download": {
+    "title": "Ready to Transform Your Farm?",
+    "subtitle": "Download Kisaan Krushi free — built for every Indian farmer.",
+    "downloadApk": "Download APK",
+    "downloadedBy": "Downloaded by {{count}} farmers",
+    "madeInIndia": "Made in India"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Have questions or feedback? We'd love to hear from you.",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your@email.com",
+    "phonePlaceholder": "Phone number (optional)",
+    "messagePlaceholder": "Write your message here...",
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone (optional)",
+    "messageLabel": "Message",
+    "submit": "Send Message",
+    "success": "Message sent! We'll get back to you soon.",
+    "error": "Something went wrong. Please try again.",
+    "infoEmailLabel": "Email",
+    "infoLocationLabel": "Location",
+    "infoLanguageLabel": "Language Support",
+    "infoLocationValue": "Hyderabad, Telangana, India",
+    "infoLanguageValue": "Telugu | English"
+  },
+  "footer": {
+    "tagline": "Made with ❤️ for Indian Farmers 🇮🇳",
+    "quickLinks": "Quick Links",
+    "support": "Support",
+    "connect": "Connect",
+    "features": "Features",
+    "howItWorks": "How It Works",
+    "about": "About",
+    "download": "Download App",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "faq": "FAQ",
+    "copyright": "© 2025 Kisaan Krushi. All rights reserved.",
+    "madeInIndia": "Made in India"
+  }
+}
