@@ -51,7 +51,8 @@ export default function Contact() {
         language: i18n.language,
       }
 
-      const apiBase = import.meta.env.VITE_API_URL || 'https://us-central1-kisaan-krushi-a9b0e.cloudfunctions.net/api'
+      const _raw = import.meta.env.VITE_API_URL || ''
+      const apiBase = _raw.startsWith('https://') ? _raw : 'https://us-central1-kisaan-krushi-a9b0e.cloudfunctions.net/api'
       const response = await fetch(`${apiBase}/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

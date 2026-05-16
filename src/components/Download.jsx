@@ -6,7 +6,8 @@ import { useInView } from 'react-intersection-observer'
 
 const APK_URL = '#'
 
-const API_BASE = import.meta.env.VITE_API_URL || 'https://us-central1-kisaan-krushi-a9b0e.cloudfunctions.net/api'
+const _raw = import.meta.env.VITE_API_URL || ''
+const API_BASE = _raw.startsWith('https://') ? _raw : 'https://us-central1-kisaan-krushi-a9b0e.cloudfunctions.net/api'
 
 async function getDownloadCount() {
   try {
