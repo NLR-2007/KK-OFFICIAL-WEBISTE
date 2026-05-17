@@ -6,3 +6,4 @@ dist
 .firebase
 .DS_Store
 functions/node_modules
+extensions/firestore-send-email.env
