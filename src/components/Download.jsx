@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
 
-const APK_URL = 'https://firebasestorage.googleapis.com/v0/b/kisaan-krushi-a9b0e.firebasestorage.app/o/app-release.apk?alt=media&token=731b07a7-088d-4e08-a043-051afa5ccf52'
+const APK_URL = 'https://firebasestorage.googleapis.com/v0/b/kisaan-krushi-a9b0e.firebasestorage.app/o/app-release.apk?alt=media&token=2c84e345-b7b2-44c3-bbf0-e0002dfe6b4a'
 
 const _raw = import.meta.env.VITE_API_URL || ''
 const API_BASE = _raw.startsWith('https://') ? _raw : 'https://us-central1-kisaan-krushi-a9b0e.cloudfunctions.net/api'
