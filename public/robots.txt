@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kk-official-webiste.vercel.app/sitemap.xml
+Sitemap: https://kisaankrushinlr.vercel.app/sitemap.xml
